@@ -1,0 +1,83 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Multipage Education Website Using HTML, CSS, JavaScript</title>
+
+    <!-- Stylesheets -->
+     <link rel="stylesheet" href="{% static 'main/css/style.css' %}" type="text/css" media="all" />
+
+  <link rel="stylesheet" href="{% static 'main/css/about.css' %}" type="text/css" media="all" />
+
+
+    <!-- JavaScript -->
+    
+    <script defer src="{% static 'main/js/main.js' %}"></script>
+
+    <!-- Iconscout -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- Font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+     <nav>
+    <div class="container nav_container">
+      <a href="{% url 'home' %}"><h4 style='font-weight:bold;'>NIKITAS_</h4></a>
+      <ul class="nav_menu">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'item' %}">Products</a></li>
+        <li><a href="{% url 'call' %}">Contact</a></li>
+        <li><a href="{% url 'admin:index' %}">Login</a></li>
+      </ul>
+      <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+      <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+    </div>
+  </nav>
+
+    <section class="achievements">
+        <div class="container achievements__container">
+            <div class="achievements__left">
+                <img src='{% static "main/img/about_achievements.svg" %}' alt="achievements header image">
+            </div>
+
+            <div class="achievements__right">
+                <h2 class="h1">Achievements</h2>
+                <p>
+                    Our shop is gaining huge popularity around the world environment of all ages. Bloggers cooperate with us, thousands of buyers visit our store every month and we win awards in various categories
+                </p>
+                <div class="achievements__cards">
+                    <article class="achievements__card">
+                        <span class="achievements__icon">
+                            <i class="uil uil-video"></i>
+                        </span>
+                        <h3 class="h3">450+</h3>
+                        <p>Bloggers</p>
+                    </article>
+                    <article class="achievements__card">
+                        <span class="achievements__icon">
+                            <i class="uil uil-users-alt"></i>
+                        </span>
+                        <h3 class="h3">79,000+</h3>
+                        <p>Customers</p>
+                    </article>
+                    <article class="achievements__card">
+                        <span class="achievements__icon">
+                            <i class="uil uil-trophy"></i>
+                        </span>
+                        <h3 class="h3">26+</h3>
+                        <p>Awards</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ </body>
+ </html>

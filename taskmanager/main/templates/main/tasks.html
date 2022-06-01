@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {{title}}<br>
+    {% for el in tasks %}
+        <div>
+            <h3>{{el.title}} {{el.task}}</h3><br>
+
+        </div>
+    {% endfor %}
+</body>
+</html>

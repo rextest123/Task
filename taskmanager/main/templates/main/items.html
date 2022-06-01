@@ -1,0 +1,69 @@
+{% load static %}
+<html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Nikitas Shop</title>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}" type="text/css" media="all" />
+
+  <link rel="stylesheet" href="{% static 'main/css/items.css' %}" type="text/css" media="all" />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css"/>
+
+
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+   <meta charset="UTF-8">
+   <title>Products</title>
+</head>
+<body>
+    <nav>
+    <div class="container nav_container">
+      <a href="{% url 'home' %}"><h4 style='font-weight:bold;'>NIKITAS_</h4></a>
+      <ul class="nav_menu">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'item' %}">Products</a></li>
+        <li><a href="{% url 'call' %}">Contact</a></li>
+        <li><a href="{% url 'admin:index' %}">Login</a></li>
+      </ul>
+      <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+      <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+    </div>
+  </nav>
+
+    <section class="categories">
+        <div class="container categories_container_items">
+          <div class="categories_right">
+             {% for title in titles %}
+            <article class="category">
+              <img src="{{title.image.url}}" class="image-box__items" style="position: relative; height:5rem;
+  margin: 50px auto 0;"><img>
+                <h5 class="course__info" style="text-align:center;">Product: {{title.title}}</h5>
+                <p class="course__info" style="text-align:center;">Price: {{title.price}}</p>
+            </article>
+
+
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+
+
+<!--    {% for title in titles %}-->
+<!--        <div class="categories_container">-->
+<!--            <h3 class="category_icon ">{{title.price}} </h3><br>-->
+<!--            <img src="{{title.image.url}}"><img>-->
+<!--        </div>-->
+<!--    {% endfor %}-->
+
+</body>
+</html>
