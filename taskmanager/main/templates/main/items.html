@@ -27,11 +27,11 @@
 <body>
     <nav>
     <div class="container nav_container">
-      <a href="{% url 'home' %}"><h4 style='font-weight:bold;'>NIKITAS_</h4></a>
+      <a href="{% url 'home' %}"><h4 style='font-weight:bold;'>Event organization_</h4></a>
       <ul class="nav_menu">
         <li><a href="{% url 'home' %}">Home</a></li>
         <li><a href="{% url 'about' %}">About</a></li>
-        <li><a href="{% url 'item' %}">Products</a></li>
+        <li><a href="{% url 'item' %}">Events</a></li>
         <li><a href="{% url 'call' %}">Contact</a></li>
         <li><a href="{% url 'admin:index' %}">Login</a></li>
       </ul>
@@ -47,8 +47,10 @@
             <article class="category">
               <img src="{{title.image.url}}" class="image-box__items" style="position: relative; height:5rem;
   margin: 50px auto 0;"><img>
-                <h5 class="course__info" style="text-align:center;">Product: {{title.title}}</h5>
-                <p class="course__info" style="text-align:center;">Price: {{title.price}}</p>
+                <h5 class="course__info" style="text-align:center;">Заголовок: {{title.title}}</h5>
+                <p class="course__info" style="text-align:center;">Цена: {{title.price}}</p>
+                <h5 class="course__info" style="text-align:center;">Описание: {{title.description}}</h5>
+                <p class="course__info" style="text-align:center;">Актеры: {{title.actors}}</p>
             </article>
 
 

@@ -40,11 +40,14 @@ def items(request):
     objects = Items.objects.all()
     price = Items.price
     image = Items.image
-
+    description = Items.description
+    actors = Items.actors
     context1 = {
 
         'titles': objects,
         'price': price,
-        'image':image
+        'image':image,
+        'description': description,
+        'actors': actors
     }
     return render(request, "main/items.html", context1)

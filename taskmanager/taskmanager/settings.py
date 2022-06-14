@@ -132,4 +132,4 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
-ADMIN_SITE_HEADER = "Nikitas shop admin panel"
+ADMIN_SITE_HEADER = "Event organization"
